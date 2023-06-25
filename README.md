@@ -2,7 +2,7 @@
 Это можно сделать по следующим ссылкам:  
 https://www.python.org/downloads/  
 https://www.apachefriends.org/  
-При установке XAMPP необходимо установить Apache и MySQL  
+При установке XAMPP необходимо установить Apache, MySQL и phpmyadmin  
 После скачать файлы из репозитория  
 Также необходимо скачать следующие библиотеки для Python: matplotlib, pymysql  
 Перед запуском программы необходимо запустить XAMPP Control Panel и нажать Start напротив Apache и MySQL  
