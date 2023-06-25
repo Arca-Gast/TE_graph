@@ -9,22 +9,30 @@ def file_convert(file_name):
     js = excel_data.to_json()
 
     dic = json.loads(js)
+    for value in dic.values():
+        n = len(value)
+        break
+
     mass = list()
-    for i in range(5205):
+    for i in range(n):
         mass.append({})
     for key, value in dic.items():
-        for i in range(5205):
+        for i in range(n):
             mass[i][key] = value[str(i)]
 
     with open("database.json", "w") as f:
         f.write( json.dumps(mass) )
-
-print("Convert file Y/N?")
-command = input().upper()
-if command == 'Y':
-    file_name = input("Write file name (without .xlsx): ")
-    file_convert(file_name)
-
+while True:
+    print("Convert file Y/N?")
+    command = input().upper()
+    if command == 'Y':
+        file_name = input("Write file name (without .xlsx): ")
+        file_convert(file_name)
+        break
+    elif command == 'N':
+        break
+    else:
+        print("Wrong command...")
 
 valid = False
 try:
